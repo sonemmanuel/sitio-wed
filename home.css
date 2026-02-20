@@ -1,0 +1,105 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+.navegador {
+    text-align: end;
+    transition: 1s;
+}
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.1s ease;
+    margin: 0;
+    text-align: center;
+}
+
+
+main button {
+    border-radius: 10px;
+    cursor: auto;
+    height: 15px;
+    transition-duration: 0.4s;
+}
+
+
+
+main button:hover {
+    background-color: red;
+    cursor: grabbing;
+}
+
+.section {
+    color: white;
+}
+
+section h2 {
+    color: #605f5f;
+}
+
+
+
+.section-2 {
+    display: none;
+    color: white;
+}
+.section-3 {
+    display: none;
+    color: white;
+}
+
+.section-4 {
+    display: none;
+    color: white;
+}
+
+.section-5 {
+    display: none;
+    color: white;
+}
+
+.section-6 {
+    display: none;
+    color: white;
+}
+
+.section-7 {
+    display: none;
+    color: white;
+}
+
+.section-8 {
+    display: none;
+    color: white;
+}
+
+.section-9 {
+    display: none;
+    color: white;
+}
+
+.section-10 {
+    display: none;
+    color: white;
+}
+
+.section-11 {
+    display: none;
+    color: white;
+}
+/* En tu style.css, elimina o comenta .section-2 { display: none; } 
+   ya que ahora lo controlamos con el ID y JavaScript */
+
+#fondo {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    background-color: #fcc101;/* Para que el texto y botones se apilen */
+    transition: background-color 0.4s ease;
+}
