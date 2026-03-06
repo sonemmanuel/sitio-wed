@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    color: black;
+    justify-content: end;
+    padding: 20px;
+    margin: 0;
+    mix-blend-mode: difference;
+}
+
+nav > a {
+    color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.caja1 {
+    background-color: #fcc101;
+    color: white;
+
+}
+
+.caja2 {
+    background-color: #333;
+    color: white;
+    display: none;
+}
+
+.caja3 {
+    background-color: #F862B2;
+    color: white;
+    display: none;
+}
+
+.caja4 {
+    background-color: #03c5c5;
+    color: white;
+    display: none;
+}
+
+.caja5 {
+    background-color: #333;
+    color: white;
+    display: none;
+}
+
+.caja6 {
+    background-color: #dcdcdc;
+    color: white;
+    display: none;
+}
+
+.caja7 {
+    background-color: #fcc101;
+    color: white;
+    display: none;
+}
+
+.caja8 {
+    background-color: #fcc101;
+    color: white;
+    display: none;
+}
+
+.caja9 {
+    background-color: #333;
+    color: white;
+    display: none;
+}
+
+.caja10 {
+    background-color: #bed041;
+    color: white;
+    display: none;
+}
+
+.caja11 {
+    background-color: #03c5c5;
+    color: white;
+    display: none;
+}
+
+main button:hover {
+    background-color: white;
+    cursor: grabbing;
+}
+
+div > button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 10px;
+    border: solid 1px black;
+}

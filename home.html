@@ -5,198 +5,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
     <header>
         <nav class="navegador">
             <a href="/home.html">HOME</a>
+            <span>/</span>
             <a href="/about.html">ABOUT</a>
+            <span>/</span>
             <a href="/skill.html">SKILL</a>
+            <span>/</span>
             <a href="/works&play.html">WORKS&PLAY</a>
+            <span>/</span>
             <a href="/awards.html">AWARDS</a>
+            <span>/</span>
             <a href="/contact.html">CONTACT</a>
         </nav>
     </header>
-    <main id="fondo"> 
-    <section id="sec1" class="section">
-        <h1>HAI, IM ADAM </h1>
-        <h2>I'M A DESIGN TECHNOLOGIST CURRENTLY WORKING @SQUARESPACE IN NYC</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
-    </section>
+    <main>
+        <section class="caja1">  
+            <h1>HAI, IM ADAM </h1>
+            <h2>I'M A DESIGN TECHNOLOGIST CURRENTLY WORKING @SQUARESPACE IN NYC</h2>
+            <button class="more">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection()"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
+        </section>
 
-    <section id="sec2" class="section-2" style="display: none;">
-        <h1>METROPOLIS WORLD</h1>
-        <h2>INTRODUCING METROPOLIS WORLD, A METAVERSE EXPERIENCE COMBINING PHYSICAL AND DIGITAL REALMS!</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
-    </section>
-    <section id="" class="section-3">
-        <h1>I LOVE DIGITAL</h1>
-        <h2>I SPECIALISE IN RICH INTERACTIVE EXPERIENCES FOR WEB, MOBILE AND TABLET DEVICES.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
-    </section>
-    <section class="section-4">
-        <h1>CREATIVE NETWORK</h1>
-        <h2>I LOVE TO COLLABORATE. I'M CURRENTLY LOOKING FOR OTHER CREATIVE MINDS TO WORK, GROW AND NETWORK. GET IN TOUCH!</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
-    </section>
-        <section class="section-5">
+        <section class="caja2">
+            <h1>METROPOLIS WORLD</h1>
+            <h2>INTRODUCING METROPOLIS WORLD, A METAVERSE EXPERIENCE COMBINING PHYSICAL AND DIGITAL REALMS!</h2>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection()"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
+        </section>
+        <section class="caja3">
+            <h1>I LOVE DIGITAL</h1>
+            <h2>I SPECIALISE IN RICH INTERACTIVE EXPERIENCES FOR WEB, MOBILE AND TABLET DEVICES.</h2>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection()"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
+        </section>
+        <section class="caja4">
+            <h1>CREATIVE NETWORK</h1>
+            <h2>I LOVE TO COLLABORATE. I'M CURRENTLY LOOKING FOR OTHER CREATIVE MINDS TO WORK, GROW AND NETWORK. GET IN
+                TOUCH!</h2>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
+        </section>
+        <section class="caja5">
             <h1>MULTI DISCIPLINE</h1>
-            <h2>MULTI DISCIPLINEBEING MULTI DISCIPLINED IS A BIG PART OF MY ETHOS. WHETHER IT'S DESIGN, DEVELOPMENT, VIDEO OR UX; I'M THERE.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button> 
+            <h2>MULTI DISCIPLINEBEING MULTI DISCIPLINED IS A BIG PART OF MY ETHOS. WHETHER IT'S DESIGN, DEVELOPMENT,
+                VIDEO OR UX; I'M THERE.</h2>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
-        <section class="section-6">
+        <section class="caja6">
             <h1>NEW MEDIA</h1>
-            <h2>MY FOCUS IS WORKING ON ENGAGING AND INTERACTIVE APPLICATIONS ACROSS THE SPECTRUM OF DEVICES AND PLATFORMS.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
+            <h2>MY FOCUS IS WORKING ON ENGAGING AND INTERACTIVE APPLICATIONS ACROSS THE SPECTRUM OF DEVICES AND
+                PLATFORMS.</h2>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
-        <section class="section-7">   
+        <section class="caja7">
             <h1>I LOVE TO PLAY</h1>
             <h2>WORK MAKES UP SUCH A BIG PART OF OUR LIVES, SO IT'S IMPORTANT TO INTEGRATE IT IN A POSITIVE WAY.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
-
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
-        <section class="section-8">
+        <section class="caja8">
             <h1>CREATIVE EDGE PARTIES</h1>
             <h2>THE EXPERIMENTAL SITE OF CREATIVE EDGE PARTIES. NOT JUST ANOTHER CHICKEN DINNER.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
-        <section class="section-9">
+        <section class="caja9">
             <h1>CITAK RUGAS INC</h1>
             <h2>SOLO PROJECT FOR CITAK.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
-        <section class="section-10">
+        <section class="caja10">
             <h1>APPS APPS APPS!</h1>
-            <h2>REACHING AUDIENCES ON THE GO IS BECOMING INCREASINGLY IMPORTANT; I BUILD APPS FOR BOTH WEB AND NATIVE.</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
+            <h2>REACHING AUDIENCES ON THE GO IS BECOMING INCREASINGLY IMPORTANT; I BUILD APPS FOR BOTH WEB AND NATIVE.
+            </h2>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
-        <section class="section-11">
+        <section class="caja11">
             <h1>INTERESTED</h1>
             <h2>IF YOU'VE GOT AN EXCITING PROJECT YOU'RE INTERESTED IN WORKING TOGETHER ON, GET IN TOUCH!</h2>
-        <button>LEARN MORE</button>
-        <button onclick="mostrarSection(1,'#fcc101')"></button>
-        <button onclick="mostrarSection(2,'#333')"></button>
-        <button onclick="mostrarSection(3,'#F862B2')"></button>
-        <button onclick="mostrarSection(4,'#03c5c5')"></button>
-        <button onclick="mostrarSection(5,'#333')"></button>
-        <button onclick="mostrarSection(6,'#dcdcdc')"></button>
-        <button onclick="mostrarSection(7,'#fcc101')"></button>
-        <button onclick="mostrarSection(8,'#fcc101')"></button>
-        <button onclick="mostrarSection(9,'#333')"></button>
-        <button onclick="mostrarSection(10,'#bed041')"></button>
-        <button onclick="mostrarSection(11,'#03c5c5')"></button>
+            <button class="learn">LEARN MORE</button>
+            <div>
+                <button class="boton" onclick="mostrarSection(1,'fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(2,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(3,'#F862B2')"></button>
+                <button class="boton" onclick="mostrarSection(4,'#03c5c5')"></button>
+                <button class="boton" onclick="mostrarSection(5,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(6,'#dcdcdc')"></button>
+                <button class="boton" onclick="mostrarSection(7,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(8,'#fcc101')"></button>
+                <button class="boton" onclick="mostrarSection(9,'#333')"></button>
+                <button class="boton" onclick="mostrarSection(10,'#bed041')"></button>
+                <button class="boton" onclick="mostrarSection(11,'#03c5c5')"></button>
+            </div>
         </section>
     </main>
     <footer>
@@ -209,12 +239,13 @@
                 <li><a href="https://www.behance.net/ImAdam"></a>Behance</li>
                 <li><a href="https://www.facebook.com/ImAdamTM"></a>Facebook</li>
                 <li><a href="https://x.com/ImAdamTM"></a>X</li>
-                <li><a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEqtFeuzSqmvQAAAZx9hMhg5kKSA-RKapRkwnM6NjvqYmvRwcpk8EmlW5-ixRG49RFf5sMk1AwMci0PjqGg_fNyZmqLV5OaFZjwyYanSRuHFN8suWYKgrwXgtaQUJmBkFq6idE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2FImAdamTM"></a>Linked in</li>
+                <li><a
+                        href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEqtFeuzSqmvQAAAZx9hMhg5kKSA-RKapRkwnM6NjvqYmvRwcpk8EmlW5-ixRG49RFf5sMk1AwMci0PjqGg_fNyZmqLV5OaFZjwyYanSRuHFN8suWYKgrwXgtaQUJmBkFq6idE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2FImAdamTM"></a>Linked
+                    in</li>
                 <li><a href="/contact.html">Contacto</a></li>
             </ul>
         </div>
-    </footer>
-    <script src="home.js"></script>
+    </footer>   
 </body>
 
 </html>

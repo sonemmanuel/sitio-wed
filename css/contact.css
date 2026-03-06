@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+    --bg-color: #00c2c7; 
+    --text-color: #ffffff;
+    --input-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0px;
+}
+
+/* --- Navegador --- */
+.navegador {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navegador a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.navegador a::after {
+    color: rgba(255,255,255,0.5);
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.postal-container {
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    border: 3px solid white; 
+    padding: 40px;
+    display: flex;
+    min-height: 500px;
+}
+
+.postal-body {
+    display: flex;
+    width: 90%;
+    gap: 40px;
+}
+
+.info-side {
+    flex: 1;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    padding-right: 20px;
+}
+
+.form-side {
+    flex: 1.5;
+}
+
+/* --- Tipografía --- */
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 0.9;
+}
+
+p, label {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* --- Formulario --- */
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    background: var(--input-bg);
+    border: 2px solid white;
+    border-radius: 15px; 
+    padding: 12px;
+    color: white;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.send-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    float:  right;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.send-btn:hover {
+    background-color: #444;
+}
+
+.stamp {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 85px;
+    border: 4px dotted white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
