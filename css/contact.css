@@ -8,18 +8,17 @@
 
 body {
     background-color: var(--bg-color);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0px;
 }
 
-/* --- Navegador --- */
 .navegador {
     display: flex;
     justify-content: end;
     padding: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .navegador a {
@@ -36,13 +35,13 @@ body {
 }
 
 .postal-container {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 800px;
+    margin: 30px auto;
     position: relative;
     border: 3px solid white; 
-    padding: 40px;
+    padding: 10px;
     display: flex;
-    min-height: 500px;
+    min-height: 300px;
 }
 
 .postal-body {
@@ -61,7 +60,6 @@ body {
     flex: 1.5;
 }
 
-/* --- Tipografía --- */
 h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 5rem;
@@ -75,7 +73,6 @@ p, label {
     font-weight: 300;
 }
 
-/* --- Formulario --- */
 .form-group {
     margin-bottom: 10px;
 }
@@ -88,7 +85,18 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input {
+    width: 50%;
+    background: var(--input-bg);
+    border: 2px solid white;
+    border-radius: 15px; 
+    padding: 12px;
+    color: white;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+textarea {
     width: 100%;
     background: var(--input-bg);
     border: 2px solid white;

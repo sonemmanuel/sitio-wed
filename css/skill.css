@@ -1,0 +1,15 @@
+body {
+    background-color: #333;
+}
+
+header {
+    display: flex;
+    color: white;
+    justify-content: end;
+    padding: 20px;
+    margin: 0;
+    mix-blend-mode: difference;
+}
+nav > a {
+    color: white;
+}
