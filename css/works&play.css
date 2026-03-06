@@ -5,9 +5,9 @@ header {
     display: flex;
     color: white;
     justify-content: end;
-    padding: 20px;
     margin: 0;
     mix-blend-mode: difference;
+    padding: 20px;
 }
 
 nav > a {

@@ -16,43 +16,43 @@ body {
 
 .navegador {
     display: flex;
+    font-family: 'Arial', sans-serif;
     justify-content: end;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
 }
 
 .navegador a {
     color: white;
-    text-decoration: none;
-    margin: 0 10px;
     font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 .navegador a::after {
     color: rgba(255,255,255,0.5);
-    margin-left: 10px;
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .postal-container {
-    max-width: 800px;
-    margin: 30px auto;
-    position: relative;
-    border: 3px solid white; 
-    padding: 10px;
     display: flex;
+    border: 3px solid white;
+    margin: 30px auto; 
+    max-width: 800px;
     min-height: 300px;
+    padding: 10px;
+    position: relative;
 }
 
 .postal-body {
     display: flex;
-    width: 90%;
     gap: 40px;
+    width: 90%;
 }
 
 .info-side {
-    flex: 1;
     border-right: 2px solid rgba(255,255,255,0.5);
+    flex: 1;
     padding-right: 20px;
 }
 
@@ -63,9 +63,9 @@ body {
 h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 5rem;
-    text-transform: uppercase;
-    margin: 0;
     line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 p, label {
@@ -80,31 +80,31 @@ p, label {
 label {
     display: block;
     font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
     font-size: 1.4rem;
+    text-transform: uppercase;
     margin-bottom: 5px;
 }
 
 input {
-    width: 50%;
     background: var(--input-bg);
     border: 2px solid white;
     border-radius: 15px; 
-    padding: 12px;
+    box-sizing: border-box;
     color: white;
     font-family: inherit;
-    box-sizing: border-box;
+    padding: 12px;
+    width: 50%;
 }
 
 textarea {
-    width: 100%;
     background: var(--input-bg);
     border: 2px solid white;
     border-radius: 15px; 
-    padding: 12px;
+    box-sizing: border-box;
     color: white;
     font-family: inherit;
-    box-sizing: border-box;
+    padding: 12px;
+    width: 100%;
 }
 
 input::placeholder, textarea::placeholder {
@@ -117,18 +117,18 @@ textarea {
 }
 
 .send-btn {
+    align-items: center;
     background-color: #555;
-    color: white;
     border: none;
-    padding: 10px 30px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
     border-radius: 8px;
-    float:  right;
+    color: white;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    float:  right;
     gap: 10px;
+    padding: 10px 30px;
 }
 
 .send-btn:hover {
@@ -136,15 +136,15 @@ textarea {
 }
 
 .stamp {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 70px;
-    height: 85px;
+    align-items: center;
     border: 4px dotted white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: 'Oswald', sans-serif;
+    height: 85px;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 70px;
 }

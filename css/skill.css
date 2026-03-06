@@ -6,10 +6,24 @@ header {
     display: flex;
     color: white;
     justify-content: end;
-    padding: 20px;
     margin: 0;
     mix-blend-mode: difference;
+    padding: 20px;
 }
 nav > a {
     color: white;
 }
+
+main > section {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+main > section > button {
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+}
+
