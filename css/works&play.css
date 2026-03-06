@@ -16,6 +16,8 @@ nav > a {
 
 article {
     display: flex;
+    align-items: start;
+    justify-content: start;
     flex-wrap: wrap;
     
 }
