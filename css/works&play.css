@@ -5,20 +5,85 @@ header {
     display: flex;
     color: white;
     justify-content: end;
-    margin: 0;
+    margin: 5px;
     mix-blend-mode: difference;
-    padding: 20px;
+    padding: 10px;
 }
 
 nav > a {
     color: white;
 }
 
-article {
+section > article{
     display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-wrap: wrap;
+
+}
+
+section {
+    display: flex;          
+    flex-wrap: wrap;       
+    justify-content: center; 
+    gap: 15px;             
+    max-width: 1500px;     
+    margin: 0 auto;    
+}
+
+
+section > article {
+    /* calc(20% - 15px) para aprox. 5 artículos por fila */
+    flex: 0 1 calc(20% - 15px); 
     
+    background: #fff;       
+    padding: 15px;         
+    border-radius: 8px;    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    box-sizing: border-box; 
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+section > article:hover {
+    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
+}
+
+section > article img {
+    width: 100%;           
+    height: auto;          
+    border-radius: 5px;    
+    display: block;       
+    margin-bottom: 10px;  
+}
+
+section > article h2 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+section > article p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+footer > div {
+    background-color: #555;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    flex-direction:row ;
+}
+
+footer > div > ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
 }
 

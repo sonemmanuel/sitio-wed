@@ -27,3 +27,28 @@ main > section > button {
     color: white;
 }
 
+
+
+
+
+footer > div {
+    background-color: #555;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    flex-direction:row ;
+}
+
+footer > div > ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
