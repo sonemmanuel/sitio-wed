@@ -18,7 +18,6 @@ nav a {
     font-weight: bold;
 }
 
-/* Configuración del contenedor principal */
 main {
     min-height: 80vh;
     display: flex;
@@ -28,41 +27,154 @@ main {
     text-align: center;
     color: white;
     font-family: Arial, sans-serif;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
-/* Estilo para cada bloque de premios dentro del main */
-main > div {
-    display: none; /* Oculta todos por defecto */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.carousel-center {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
+    gap: 10px;
+    flex: 1;
+    padding: 0 40px;
 }
 
-/* Muestra solo el primero (puedes cambiar esto con JavaScript después) */
-main > div:first-of-type {
+.carousel-side-images {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    min-width: auto;
 }
 
-/* Estilo de los títulos (Awwwards, The FWA, etc.) */
-main h1 {
+.carousel-side-left {
+    flex-direction: row-reverse;
+}
+
+.side-image {
+    max-width: 80px;
+    height: auto;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: grayscale(40%);
+    animation: sideImageSlide 0.5s ease-out;
+}
+
+.side-image:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.carousel-image-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-main-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    animation: imageSlide 0.6s ease-in-out;
+}
+
+@keyframes imageSlide {
+    0% {
+        opacity: 0;
+        transform: scale(0.85) rotateY(10deg);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateY(0);
+    }
+}
+
+@keyframes sideImageSlide {
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(10px);
+    }
+    to {
+        opacity: 0.6;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.award-logo {
+    max-width: 90px;
+    height: auto;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    filter: grayscale(30%);
+}
+
+.award-logo:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.award-logo.active {
+    max-width: 180px;
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1);
+}
+
+.award-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#award-title {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: all 0.4s ease;
 }
 
-/* --- DISEÑO DE LAS FLECHAS --- */
-.nav-buttons {
+.award-content {
+    text-align: center;
+    width: 100%;
+}
+
+.award-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+}
+
+.award-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+.carousel-nav {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-    order: -1; /* Esto coloca las flechas arriba del texto pero debajo del logo/título si lo prefieres */
 }
 
-/* Contenedor circular de la flecha */
 .arrow {
     width: 50px;
     height: 50px;
@@ -74,13 +186,13 @@ main h1 {
     cursor: pointer;
     transition: background 0.3s;
     position: relative;
+    margin: 0 15px;
 }
 
 .arrow:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Dibujo del triángulo de la flecha */
 .arrow::after {
     content: '';
     width: 12px;
@@ -102,15 +214,36 @@ main h1 {
     margin-right: 5px;
 }
 
+.image-indicators {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
 
+.indicator.active {
+    background-color: white;
+    transform: scale(1.3);
+}
 
-footer > div {
+footer>div {
     background-color: #555;
     display: flex;
     justify-content: space-between;
-    padding: 5px
+    padding: 20px;
 }
 
 .logo {
@@ -118,11 +251,18 @@ footer > div {
     align-items: center;
     gap: 12px;
     justify-content: center;
-    flex-direction:row ;
+    flex-direction: row;
+    color: white;
 }
 
-footer > div > ul {
+footer>div>ul {
     display: flex;
     list-style: none;
     gap: 10px;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
