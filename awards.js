@@ -33,36 +33,36 @@ const awardData = [
         `,
   },
   {
-    title: 'French Design Index',
-    image: 'img/frenchdesignindex_115_134.png',
+    title: "French Design Index",
+    image: "img/frenchdesignindex_115_134.png",
     content: `
             <p>Adam Hartwig: Inspirational Site of the Week <a href="http://www.frenchdesignindex.com/design-index-3802">Launch</a></p>
     `,
   },
   {
-    title: 'CSSAwards',
-    image: 'img/cssawards_242_134.png',
+    title: "CSSAwards",
+    image: "img/cssawards_242_134.png",
     content: `
             <p>Adam Hartwig: Inspirational Site of the Week <a href="http://www.frenchdesignindex.com/design-index-3802">Launch</a></p>
     `,
   },
   {
-    title: 'The Best Designs',
-    image: 'img/thebestdesigns_188_134.png',
+    title: "The Best Designs",
+    image: "img/thebestdesigns_188_134.png",
     content: `
             <p>Adam Hartwig: Inspirational Site of the Week <a href="http://www.frenchdesignindex.com/design-index-3802">Launch</a></p>
     `,
   },
   {
-    title: 'CSS Design Awards',
-    image: 'img/cssdesignawards_138_134.png',
+    title: "CSS Design Awards",
+    image: "img/cssdesignawards_138_134.png",
     content: `
             <p>Adam Hartwig: Inspirational Site of the Week <a href="http://www.frenchdesignindex.com/design-index-3802">Launch</a></p>
     `,
   },
   {
-    title: 'OnePageLove',
-    image: 'img/onepagelove_150_134.png',
+    title: "OnePageLove",
+    image: "img/onepagelove_150_134.png",
     content: `
             <p>Adam Hartwig: Inspirational Site of the Week <a href="http://www.frenchdesignindex.com/design-index-3802">Launch</a></p>
     `,
@@ -104,7 +104,9 @@ function updateContent(index) {
   document.querySelectorAll(".indicator").forEach((indicator) => {
     indicator.classList.remove("active");
   });
-  document.querySelector(`.indicator[data-index="${index}"]`).classList.add("active");
+  document
+    .querySelector(`.indicator[data-index="${index}"]`)
+    .classList.add("active");
 }
 
 // Función para ir a la siguiente sección

@@ -3,93 +3,169 @@
     src: url(/fonts/adamfont-webfont.woff) format('woff');
 }
 
-body {
-    background-color: gainsboro;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #e8a0b8;
+}
+
+/* ========== Header Navigation ========== */
 header {
     display: flex;
     color: white;
     justify-content: end;
-    margin: 5px;
+    margin: 0;
     mix-blend-mode: difference;
-    padding: 10px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
 }
 
-nav > a {
+nav>a {
     color: white;
 }
 
-section > article{
+/* ========== Main Layout ========== */
+main {
     display: flex;
-
-}
-
-section {
-    display: flex;          
-    flex-wrap: wrap;       
-    justify-content: center; 
-    gap: 15px;             
-    max-width: 1500px;     
-    margin: 0 auto;    
-}
-
-
-section > article {
-    /* calc(20% - 15px) para aprox. 5 artículos por fila */
-    flex: 0 1 calc(20% - 15px); 
-    
-    background: #fff;       
-    padding: 15px;         
-    border-radius: 8px;    
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    box-sizing: border-box; 
-    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
-}
-
-section > article:hover {
-    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
-}
-
-section > article img {
-    width: 100%;           
-    height: auto;          
-    border-radius: 5px;    
-    display: block;       
-    margin-bottom: 10px;  
-}
-
-section > article h2 {
-    font-size: 1rem;
-    margin: 0 0 5px 0;
-    color: #333;
-    text-transform: uppercase;
-}
-
-section > article p {
-    font-size: 0.8rem;
-    color: #666;
-    margin: 0;
-}
-
-footer > div {
-    background-color: #555;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     justify-content: center;
-    flex-direction:row ;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
-footer > div > ul {
-    display: flex;
-    list-style: none;
-    gap: 10px;
+/* ========== Head Section - Interactive Head with Hover Zones ========== */
+
+/* Contenedor principal */
+.head-section {
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Todas las capas se apilan en el mismo lugar */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* La imagen base siempre visible y define la altura del contenedor */
+.layer.base {
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlays ocultos por defecto */
+.layer.overlay {
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay activo */
+.layer.overlay.active {
+    opacity: 1;
+}
+
+/* Separador encima de los overlays */
+.layer.separator {
+    z-index: 3;
+    pointer-events: none;
+    max-width: 10px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+}
+
+/* Botón explore */
+.explore-btn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    background-image: url(/img/about/explore.png);
+    height: 50px;
+    width: 150px;
+    background-position: 80% -10%;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-position: 80% 115%;
+    transition: background-position 0.3s ease;
+}
+
+/* Zonas hover: invisibles pero capturan el mouse */
+.hover-zone {
+    position: absolute;
+    z-index: 5;
+    background: transparent;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hover-zone:hover {
+    opacity: .1;
+
+}
+
+.hover-zone-1 {
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 33%;
+}
+
+.hover-zone-2 {
+    top: 0%;
+    left: 50%;
+    width: 50%;
+    height: 33%;
+}
+
+.hover-zone-3 {
+    top: 33%;
+    left: 0%;
+    width: 50%;
+    height: 33%;
+}
+
+.hover-zone-4 {
+    top: 33%;
+    left: 50%;
+    width: 50%;
+    height: 33%;
+}
+
+.hover-zone-5 {
+    top: 66%;
+    left: 0%;
+    width: 50%;
+    height: 34%;
+}
+
+.hover-zone-6 {
+    top: 66%;
+    right: 0%;
+    width: 50%;
+    height: 34%;
 }
 
 footer {

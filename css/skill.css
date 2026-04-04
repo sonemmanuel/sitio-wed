@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'AdamDrawn';
+    src: url(/fonts/adamfont-webfont.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #333;
+    background-color: #2a2a2a;
+    overflow: hidden;
 }
 
 header {
@@ -9,46 +21,296 @@ header {
     margin: 0;
     mix-blend-mode: difference;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
 }
-nav > a {
+
+nav>a {
     color: white;
 }
 
-main > section {
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main>section:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main>section:last-child {
     align-items: center;
     display: flex;
     gap: 10px;
     justify-content: center;
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
-main > section > button {
-    background-color: gray;
-    border-radius: 5px;
+.tab {
+    padding: 15px 2px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
+    width: 120px;
+    transition: background-position 0.3s ease;
+}
+
+.tab span {
+    display: none;
+}
+
+.tab-js {
+    background-image: url(/img/skills/tab-js.png);
+}
+
+.tab-html {
+    background-image: url(/img/skills/tab-html.png);
+}
+
+.tab-illustration {
+    background-image: url(/img/skills/tab-illustration.png);
+}
+
+.tab-creative-software {
+    background-image: url(/img/skills/tab-creative-software.png);
+}
+
+.tab-creative-direction {
+    background-image: url(/img/skills/tab-creative-direction.png);
+}
+
+.tab-server-technologies {
+    background-image: url(/img/skills/tab-server-technologies.png);
+}
+
+.tab-video-production {
+    background-image: url(/img/skills/tab-video-production.png);
+}
+
+.tab-apps {
+    background-image: url(/img/skills/tab-apps.png);
+}
+
+.tab-nodejs {
+    background-image: url(/img/skills/tab-node-js.png);
+}
+
+.tab:hover {
+    background-position: 100% 90%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+
+#solarCanvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+.planet-tooltip {
+    position: fixed;
+    background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+    border: 3px solid #00bfff;
+    border-radius: 8px;
+    padding: 12px 20px;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 100;
+    display: none;
+    pointer-events: none;
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.6);
+    white-space: nowrap;
 }
 
+.planet-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #0066cc;
+}
 
+.planet-tooltip.active {
+    display: block;
+}
 
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
 
-
-footer > div {
-    background-color: #555;
+.footer-container {
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
-    padding: 5px
+    transition: background 0.3s ease;
 }
 
-.logo {
+.footer-copy {
+    display: none;
+}
+
+.footer-copy.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 39%;
+    top: 8px;
+    color: #fff;
+    font-family: 'AdamDrawn', sans-serif;
+}
+
+.adam-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/footer/adam.png);
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
+    order: -1;
+}
+
+.adam-icon:hover {
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.info-icon {
+    background-image: url(/img/footer/info.png);
+    padding: 15px 2px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
+    width: 30px;
+    height: 20px;
+    transition: background-position 0.3s ease;
+    margin: auto 0;
+}
+
+.info-icon:hover {
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.info-icon.active {
+    display: none;
+}
+
+#info {
+    display: none;
+}
+
+#info.active {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    transition: all 0.3s ease;
+}
+
+.footer-container.active {
     display: flex;
     align-items: center;
-    gap: 12px;
-    justify-content: center;
-    flex-direction:row ;
+    background-image: url(/img/footer/bg.png);
+    height: 60px;
+    transition: all 0.3s ease;
 }
 
-footer > div > ul {
+.close-btn {
     display: flex;
-    list-style: none;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/footer/close.png);
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
 }
 
+.close-btn:hover {
+    background-position: 0% 120%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.email-btn,
+.linkedin-btn,
+.twitter-btn,
+.facebook-btn,
+.behance-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
+}
+
+.email-btn:hover,
+.linkedin-btn:hover,
+.twitter-btn:hover,
+.facebook-btn:hover,
+.behance-btn:hover {
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.email-btn {
+    background-image: url(/img/footer/email.png);
+}
+
+.linkedin-btn {
+    background-image: url(/img/footer/linked-in.png);
+}
+
+.twitter-btn {
+    background-image: url(/img/footer/twitter.png);
+}
+
+.facebook-btn {
+    background-image: url(/img/footer/facebook.png);
+}
+
+.behance-btn {
+    background-image: url(/img/footer/behance.png);
+}

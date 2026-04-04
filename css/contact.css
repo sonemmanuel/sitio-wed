@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@300;400&display=swap');
+@font-face {
+    font-family: 'AdamDrawn';
+    src: url(/fonts/adamfont-webfont.woff) format('woff');
+}
 
 :root {
-    --bg-color: #00c2c7; 
+    --bg-color: #00c2c7;
     --text-color: #ffffff;
     --input-bg: rgba(255, 255, 255, 0.1);
 }
@@ -29,7 +32,7 @@ body {
 }
 
 .navegador a::after {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: bold;
     margin-left: 10px;
 }
@@ -37,7 +40,7 @@ body {
 .postal-container {
     display: flex;
     border: 3px solid white;
-    margin: 30px auto; 
+    margin: 30px auto;
     max-width: 800px;
     min-height: 300px;
     padding: 40px;
@@ -51,7 +54,7 @@ body {
 }
 
 .info-side {
-    border-right: 2px solid rgba(255,255,255,0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
     flex: 1;
     padding-right: 20px;
 }
@@ -68,7 +71,8 @@ h1 {
     text-transform: uppercase;
 }
 
-p, label {
+p,
+label {
     font-size: 1.1rem;
     font-weight: 300;
 }
@@ -88,7 +92,7 @@ label {
 input {
     background: var(--input-bg);
     border: 2px solid white;
-    border-radius: 15px; 
+    border-radius: 15px;
     box-sizing: border-box;
     color: white;
     font-family: inherit;
@@ -99,7 +103,7 @@ input {
 textarea {
     background: var(--input-bg);
     border: 2px solid white;
-    border-radius: 15px; 
+    border-radius: 15px;
     box-sizing: border-box;
     color: white;
     font-family: inherit;
@@ -107,8 +111,9 @@ textarea {
     width: 100%;
 }
 
-input::placeholder, textarea::placeholder {
-    color: rgba(255,255,255,0.6);
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 textarea {
@@ -126,7 +131,7 @@ textarea {
     display: flex;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
-    float:  right;
+    float: right;
     gap: 10px;
     padding: 10px 30px;
 }
@@ -150,23 +155,158 @@ textarea {
 }
 
 
-footer > div {
-    background-color: #555;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.footer-container {
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
-    padding: 5px
+    transition: background 0.3s ease;
 }
 
-.logo {
+.footer-copy {
+    display: none;
+}
+
+.footer-copy.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 39%;
+    top: 8px;
+    color: #fff;
+    font-family: 'AdamDrawn', sans-serif;
+}
+
+.adam-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/footer/adam.png);
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
+    order: -1;
+}
+
+.adam-icon:hover {
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.info-icon {
+    background-image: url(/img/footer/info.png);
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
+    margin: auto 0;
+}
+
+.info-icon:hover {
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.info-icon.active {
+    display: none;
+}
+
+#info {
+    display: none;
+}
+
+#info.active {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    transition: all 0.3s ease;
+}
+
+.footer-container.active {
     display: flex;
     align-items: center;
-    gap: 12px;
-    justify-content: center;
-    flex-direction:row ;
+    background-image: url(/img/footer/bg.png);
+    height: 60px;
+    transition: all 0.3s ease;
 }
 
-footer > div > ul {
+.close-btn {
     display: flex;
-    list-style: none;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/footer/close.png);
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
+}
+
+.close-btn:hover {
+    background-position: 0% 120%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.email-btn,
+.linkedin-btn,
+.twitter-btn,
+.facebook-btn,
+.behance-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20%;
+    transition: background-position 0.3s ease;
+}
+
+.email-btn:hover,
+.linkedin-btn:hover,
+.twitter-btn:hover,
+.facebook-btn:hover,
+.behance-btn:hover {
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+    cursor: pointer;
+}
+
+.email-btn {
+    background-image: url(/img/footer/email.png);
+}
+
+.linkedin-btn {
+    background-image: url(/img/footer/linked-in.png);
+}
+
+.twitter-btn {
+    background-image: url(/img/footer/twitter.png);
+}
+
+.facebook-btn {
+    background-image: url(/img/footer/facebook.png);
+}
+
+.behance-btn {
+    background-image: url(/img/footer/behance.png);
 }

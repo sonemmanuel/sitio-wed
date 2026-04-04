@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/skill.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navegador">
-            <a href="/home.html">HOME</a>
+            <a href="/index.html">HOME</a>
             <span>/</span>
             <a href="/about.html">ABOUT</a>
             <span>/</span>
@@ -26,46 +27,47 @@
     </header>
     <main>
         <section>
-            <canvas>
-
-            </canvas>
+            <canvas id="solarCanvas"></canvas>
+            <div id="planetTooltip" class="planet-tooltip"></div>
         </section>
-        <section>
-            <button>JAVASCRIPT</button>
-            <button>HTML/CSS</button>
-            <button>ILLUSTRATION</button>
-            <button>CREATIVE SOFTWARE</button>
-            <button>CREATIVE DIRECTION</button>
-            <button>SERVER TECHNOLOGIES</button>
-            <button>VIDEO PRODUCTION</button>
-            <button>APPS</button>
-            <button>NODE.JS</button>
+        <section class="tabs">
+            <div class="tab tab-js" data-planet="0"><span>JAVASCRIPT</span></div>
+            <div class="tab tab-html" data-planet="1"><span>HTML</span></div>
+            <div class="tab tab-illustration" data-planet="2"><span>ILLUSTRATION</span></div>
+            <div class="tab tab-creative-software" data-planet="3"><span>CREATIVE SOFTWARE</span></div>
+            <div class="tab tab-creative-direction" data-planet="4"><span>CREATIVE DIRECTION</span></div>
+            <div class="tab tab-server-technologies" data-planet="5"><span>SERVER TECHNOLOGIES</span></div>
+            <div class="tab tab-video-production" data-planet="6"><span>VIDEO PRODUCTION</span></div>
+            <div class="tab tab-apps" data-planet="7"><span>APPS</span></div>
+            <div class="tab tab-nodejs" data-planet="8"><span>NODE.JS</span></div>
         </section>
     </main>
 
     <footer>
-        <div>
-            <div class="logo">
-                <a href="">Link</a>
-                <p>© 2026</p>
+        <div class="footer-container">
+            <div class="icon">
+                <a href="index.html" class="adam-icon">
+                </a>
             </div>
-            <ul>
-                <li><a href="https://www.behance.net/ImAdam.com"></a>Behance</li>
-                <span>|</span>
-                <li><a href="https://www.facebook.com/ImAdamTM.com"></a>Facebook</li>
-                <span>|</span>
-                <li><a href="https://x.com/ImAdamTM"></a>X</li>
-                <span>|</span>
-                <li><a
-                        href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEqtFeuzSqmvQAAAZx9hMhg5kKSA-RKapRkwnM6NjvqYmvRwcpk8EmlW5-ixRG49RFf5sMk1AwMci0PjqGg_fNyZmqLV5OaFZjwyYanSRuHFN8suWYKgrwXgtaQUJmBkFq6idE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2FImAdamTM">Linked
-                        in</a>
-                </li>
-                <span>|</span>
-                <li><a href="/contact.html">Contacto</a></li>
-            </ul>
+            <div class="footer-copy">
+                <p>&copy; 2026</p>
+            </div>
+            <div id="info" class="info-container">
+                <a href="#close" class="close-btn"></a>
+                <a href="#email" class="email-btn"></a>
+                <a href="#linkedin" class="linkedin-btn"></a>
+                <a href="#twitter" class="twitter-btn"></a>
+                <a href="#facebook" class="facebook-btn"></a>
+                <a href="#behance" class="behance-btn"></a>
+            </div>
+            <a href="#info" class="info-icon">
+
+            </a>
         </div>
     </footer>
 
+    <script src="skill.js"></script>
+    <script src="footer.js"></script>
 </body>
 
 </html>
