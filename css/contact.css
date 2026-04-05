@@ -17,25 +17,83 @@ body {
     padding: 0px;
 }
 
-.navegador {
+header {
     display: flex;
-    font-family: 'Arial', sans-serif;
     justify-content: end;
-    padding: 20px;
+    margin: 5px;
+    padding: 20px 0;
 }
 
-.navegador a {
-    color: white;
-    font-weight: bold;
-    margin: 0 10px;
-    text-decoration: none;
+.navegador>a {
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
 }
 
-.navegador a::after {
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: bold;
-    margin-left: 10px;
+.navegador>a:hover {
+    background-position: center 100%;
+    transition: background-position 0.3s ease;
 }
+
+.nav-home {
+    background-image: url(/img/nav/home.png);
+    background-size: 30px 35px;
+    padding: 0px 20px;
+}
+
+.nav-about {
+    background-image: url(/img/nav/about.png);
+    background-size: 35px 35px;
+    padding: 0px 24px;
+}
+
+
+.nav-skills {
+    background-image: url(/img/nav/skills.png);
+    background-size: 36px 35px;
+    padding: 0px 20px;
+}
+
+.nav-workplay {
+    background-image: url(/img/nav/workplay.png);
+    background-size: 73px 35px;
+    padding: 0px 40px;
+}
+
+.nav-awards {
+    background-image: url(/img/nav/awards.png);
+    background-size: 48px 35px;
+    padding: 0px 25px;
+}
+
+.nav-contact {
+    background-image: url(/img/nav/contact.png);
+    background-size: 49px 35px;
+    padding: 0px 25px;
+    position: relative;
+}
+
+.nav-contact::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background-image: url(/img/nav/active-icon.png);
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navegador>span {
+    background-image: url(/img/nav/separator.png);
+    padding: 0px 6px;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+}
+
 
 .postal-container {
     display: flex;
@@ -142,7 +200,6 @@ textarea {
 
 .stamp {
     align-items: center;
-    border: 4px dotted white;
     display: flex;
     flex-direction: column;
     font-family: 'Oswald', sans-serif;
@@ -152,6 +209,9 @@ textarea {
     right: 20px;
     top: 20px;
     width: 70px;
+    background-image: url(/img/contact/stamp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 

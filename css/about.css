@@ -19,7 +19,6 @@ header {
     color: white;
     justify-content: end;
     margin: 0;
-    mix-blend-mode: difference;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -28,8 +27,73 @@ header {
     width: 100%;
 }
 
-nav>a {
-    color: white;
+.navegador>a {
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
+}
+
+.navegador>a:hover {
+    background-position: center 100%;
+    transition: background-position 0.3s ease;
+}
+
+.nav-home {
+    background-image: url(/img/nav/home.png);
+    background-size: 30px 35px;
+    padding: 0px 20px;
+}
+
+.nav-about {
+    background-image: url(/img/nav/about.png);
+    background-size: 35px 35px;
+    padding: 0px 24px;
+    position: relative;
+}
+
+.nav-about::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background-image: url(/img/nav/active-icon.png);
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-skills {
+    background-image: url(/img/nav/skills.png);
+    background-size: 36px 35px;
+    padding: 0px 20px;
+}
+
+.nav-workplay {
+    background-image: url(/img/nav/workplay.png);
+    background-size: 73px 35px;
+    padding: 0px 40px;
+}
+
+.nav-awards {
+    background-image: url(/img/nav/awards.png);
+    background-size: 48px 35px;
+    padding: 0px 25px;
+}
+
+.nav-contact {
+    background-image: url(/img/nav/contact.png);
+    background-size: 49px 35px;
+    padding: 0px 25px;
+}
+
+.navegador>span {
+    background-image: url(/img/nav/separator.png);
+    padding: 0px 6px;
+    background-position: center 75%;
+    background-repeat: no-repeat;
 }
 
 /* ========== Main Layout ========== */
@@ -92,6 +156,8 @@ main {
 
 /* Botón explore */
 .explore-btn {
+    border: none;
+    background-color: transparent;
     cursor: pointer;
     position: absolute;
     z-index: 6;
@@ -166,6 +232,105 @@ main {
     right: 0%;
     width: 50%;
     height: 34%;
+}
+
+/* ========== Anatomy Section ========== */
+
+#anatomy-section {
+    display: none;
+    position: relative;
+    width: 100%;
+    background-color: #e8a0b8;
+    overflow: hidden;
+}
+
+#anatomy-section.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Animación de salida del head-section */
+.head-section.splitting {
+    animation: splitOut 0.5s ease-in forwards;
+}
+
+@keyframes splitOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+}
+
+/* Tarjetas de órganos - Contenedor */
+.anatomy-card {
+    position: relative;
+    width: 350px;
+    height: 320px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transform: scale(0.4) translateY(60px);
+    cursor: pointer;
+}
+
+.anatomy-card.visible:hover {
+    animation: glitchOut 0.5s ease forwards;
+    animation: glitchIn 0.5s ease forwards;
+}
+
+.anatomy-card.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+#card-brain {
+    background-image: url('/img/about/brain.png');
+    transition: background-image 0.3s ease;
+}
+
+#card-brain:hover {
+    background-image: url('/img/about/brain-overlay.png');
+    transition: background-image 0.3s ease;
+    max-width: 350px;
+    width: 100%;
+}
+
+#card-heart {
+    background-image: url('/img/about/heart.png');
+    transition: background-image 0.3s ease;
+}
+
+#card-heart:hover {
+    background-image: url('/img/about/heart-overlay.png');
+    transition: background-image 0.3s ease;
+    max-width: 350px;
+    width: 100%;
+}
+
+#card-hand {
+    background-image: url('/img/about/hand.png');
+    transition: background-image 0.3s ease;
+}
+
+#card-hand:hover {
+    background-image: url('/img/about/hand-overlay.png');
+    transition: background-image 0.3s ease;
+    max-width: 350px;
+    width: 100%;
 }
 
 footer {
@@ -322,4 +487,110 @@ footer {
 
 .behance-btn {
     background-image: url(/img/footer/behance.png);
+}
+
+@keyframes glitchOut {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    10% {
+        transform: translate(-8px, 2px);
+        clip-path: inset(15% 0 70% 0);
+    }
+
+    15% {
+        transform: translate(6px, -3px);
+        clip-path: inset(60% 0 10% 0);
+        opacity: 0.7;
+    }
+
+    20% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate(-12px, 0);
+        clip-path: inset(30% 0 30% 0);
+    }
+
+    35% {
+        transform: translate(10px, 4px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translate(-5px, -2px);
+        clip-path: inset(50% 0 0 0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes glitchIn {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    10% {
+        opacity: 0.4;
+        transform: translate(7px, -4px);
+        clip-path: inset(40% 0 40% 0);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translate(-5px, 3px);
+    }
+
+    30% {
+        opacity: 0.8;
+        transform: translate(4px, -2px);
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(-3px, 1px);
+        clip-path: inset(0 0 0 0);
+    }
+
+    50% {
+        transform: translate(2px, -1px);
+        background-image: url('/img/about/separator.png');
+    }
+
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    70% {
+        transform: translate(1px, 0);
+    }
+
+    80% {
+        transform: translate(0, -1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
 }

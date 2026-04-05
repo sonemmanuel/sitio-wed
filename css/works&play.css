@@ -6,72 +6,140 @@
 body {
     background-color: gainsboro;
 }
+
 header {
     display: flex;
     color: white;
     justify-content: end;
     margin: 5px;
-    mix-blend-mode: difference;
-    padding: 10px;
+    padding: 20px 0;
 }
 
-nav > a {
-    color: white;
+.navegador>a {
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
 }
 
-section > article{
+.navegador>a:hover {
+    background-position: center 100%;
+    transition: background-position 0.3s ease;
+}
+
+.nav-home {
+    background-image: url(/img/nav/home.png);
+    background-size: 30px 35px;
+    padding: 0px 20px;
+}
+
+.nav-about {
+    background-image: url(/img/nav/about.png);
+    background-size: 35px 35px;
+    padding: 0px 24px;
+}
+
+.nav-skills {
+    background-image: url(/img/nav/skills.png);
+    background-size: 36px 35px;
+    padding: 0px 20px;
+}
+
+.nav-workplay {
+    background-image: url(/img/nav/workplay.png);
+    background-size: 73px 35px;
+    padding: 0px 40px;
+    position: relative;
+}
+
+.nav-workplay::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background-image: url(/img/nav/active-icon.png);
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-awards {
+    background-image: url(/img/nav/awards.png);
+    background-size: 48px 35px;
+    padding: 0px 25px;
+}
+
+.nav-contact {
+    background-image: url(/img/nav/contact.png);
+    background-size: 49px 35px;
+    padding: 0px 25px;
+}
+
+.navegador>span {
+    background-image: url(/img/nav/separator.png);
+    padding: 0px 6px;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+}
+
+
+section>article {
     display: flex;
 
 }
 
 section {
-    display: flex;          
-    flex-wrap: wrap;       
-    justify-content: center; 
-    gap: 15px;             
-    max-width: 1500px;     
-    margin: 0 auto;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 
-section > article {
+section>article {
     /* calc(20% - 15px) para aprox. 5 artículos por fila */
-    flex: 0 1 calc(20% - 15px); 
-    
-    background: #fff;       
-    padding: 15px;         
-    border-radius: 8px;    
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    box-sizing: border-box; 
-    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+    flex: 0 1 calc(20% - 15px);
+
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    /* Efecto suave al pasar el mouse */
 }
 
-section > article:hover {
-    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
+section>article:hover {
+    transform: translateY(-5px);
+    /* Pequeña elevación al pasar el mouse */
 }
 
-section > article img {
-    width: 100%;           
-    height: auto;          
-    border-radius: 5px;    
-    display: block;       
-    margin-bottom: 10px;  
+section>article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-section > article h2 {
+section>article h2 {
     font-size: 1rem;
     margin: 0 0 5px 0;
     color: #333;
     text-transform: uppercase;
 }
 
-section > article p {
+section>article p {
     font-size: 0.8rem;
     color: #666;
     margin: 0;
 }
 
-footer > div {
+footer>div {
     background-color: #555;
     display: flex;
     justify-content: space-between;
@@ -83,10 +151,10 @@ footer > div {
     align-items: center;
     gap: 12px;
     justify-content: center;
-    flex-direction:row ;
+    flex-direction: row;
 }
 
-footer > div > ul {
+footer>div>ul {
     display: flex;
     list-style: none;
     gap: 10px;

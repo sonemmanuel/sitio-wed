@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,17 +11,17 @@
 <body>
     <header>
         <nav class="navegador">
-            <a href="/index.html">HOME</a>
-            <span>/</span>
-            <a href="/about.html">ABOUT</a>
-            <span>/</span>
-            <a href="/skill.html">SKILL</a>
-            <span>/</span>
-            <a href="/works&play.html">WORKS&PLAY</a>
-            <span>/</span>
-            <a href="/awards.html">AWARDS</a>
-            <span>/</span>
-            <a href="/contact.html">CONTACT</a>
+            <a class="nav-home" href="/index.html"></a>
+            <span></span>
+            <a class="nav-about" href="/about.html"></a>
+            <span></span>
+            <a class="nav-skills" href="/skill.html"></a>
+            <span></span>
+            <a class="nav-workplay" href="/works&play.html"></a>
+            <span></span>
+            <a class="nav-awards" href="/awards.html"></a>
+            <span></span>
+            <a class="nav-contact" href="/contact.html"></a>
         </nav>
     </header>
 
@@ -38,7 +38,7 @@
             <img class="layer separator" src="img/about/separator.png" alt="" />
 
             <!-- 4. Botón explore -->
-            <div class="explore-btn"></div>
+            <button type="submit" class="explore-btn" id="explore-btn"></button>
 
             <!-- 5. Zonas hover invisibles -->
             <div class="hover-zone hover-zone-1" data-target="overlay1"></div>
@@ -47,6 +47,16 @@
             <div class="hover-zone hover-zone-4" data-target="overlay4"></div>
             <div class="hover-zone hover-zone-5" data-target="overlay5"></div>
             <div class="hover-zone hover-zone-6" data-target="overlay6"></div>
+        </section>
+        <section id="anatomy-section">
+            <div class="anatomy-card" id="card-heart">
+            </div>
+            
+            <div class="anatomy-card" id="card-brain">
+            </div>
+
+            <div class="anatomy-card" id="card-hand">
+            </div>
 
         </section>
     </main>

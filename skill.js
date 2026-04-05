@@ -78,9 +78,9 @@ function createSun() {
   
   // Gradiente radial con múltiples colores
   const gradient = ctx.createRadialGradient(256, 256, 0, 256, 256, 256);
-  gradient.addColorStop(0, '#FFFF00');     // Centro: Amarillo
-  gradient.addColorStop(0.5, '#FF9D00');   // Medio: Naranja
-  gradient.addColorStop(1, '#FF4500');     // Exterior: Rojo-Naranja
+  gradient.addColorStop(0, '#FFFF00');
+  gradient.addColorStop(0.5, '#FF9D00');
+  gradient.addColorStop(1, '#FF4500');
   
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, 512, 512);
@@ -90,7 +90,6 @@ function createSun() {
   const material = new THREE.MeshStandardMaterial({
     map: sunTexture,
     roughness: 0.9,
-    brightness: 2,
     metalness: -5
   });
 

@@ -14,18 +14,96 @@ header {
     color: white;
     justify-content: end;
     margin: 0;
-    mix-blend-mode: difference;
     padding: 20px;
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10;
+    width: 100%;
 }
 
-nav.navegador>a {
+header {
+    display: flex;
     color: white;
+    justify-content: end;
+    margin: 0;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
 }
+
+.navegador>a {
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
+}
+
+.navegador>a:hover {
+    background-position: center 100%;
+    transition: background-position 0.3s ease;
+}
+
+.nav-home {
+    background-image: url(/img/nav/home.png);
+    background-size: 30px 35px;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.nav-home::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background-image: url(/img/nav/active-icon.png);
+    background-size: cover 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-about {
+    background-image: url(/img/nav/about.png);
+    background-size: 35px 35px;
+    padding: 0px 24px;
+}
+
+.nav-skills {
+    background-image: url(/img/nav/skills.png);
+    background-size: 36px 35px;
+    padding: 0px 20px;
+}
+
+.nav-workplay {
+    background-image: url(/img/nav/workplay.png);
+    background-size: 73px 35px;
+    padding: 0px 40px;
+}
+
+.nav-awards {
+    background-image: url(/img/nav/awards.png);
+    background-size: 48px 35px;
+    padding: 0px 25px;
+}
+
+.nav-contact {
+    background-image: url(/img/nav/contact.png);
+    background-size: 49px 35px;
+    padding: 0px 25px;
+}
+
+.navegador>span {
+    background-image: url(/img/nav/separator.png);
+    padding: 0px 6px;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+}
+
 
 section.slide {
     align-items: center;
