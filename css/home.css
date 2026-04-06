@@ -128,35 +128,42 @@ section.slide {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    text-align: center;
 }
 
 #section2 {
     background-color: #333;
     color: white;
+    text-align: center;
 }
 
 #section3 {
     background-color: #F862B2;
     color: white;
+    text-align: center;
 }
 
 #section4 {
     background-color: #03c5c5;
     color: white;
+    text-align: center;
 }
 
 #section5 {
     background-color: #333;
     color: white;
+    text-align: center;
 }
 
 #section6 {
     background-color: #dcdcdc;
     color: #333;
+    text-align: center;
 }
 
 #section6 .nav-dot {
     border-color: #333;
+    
 }
 
 #section6 .nav-dot:hover {
@@ -181,6 +188,7 @@ section.slide {
 #section10 {
     background-color: #bed041;
     color: white;
+    text-align: center;
 }
 
 #section11 {
