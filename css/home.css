@@ -22,19 +22,6 @@ header {
     width: 100%;
 }
 
-header {
-    display: flex;
-    color: white;
-    justify-content: end;
-    margin: 0;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    width: 100%;
-}
-
 .navegador>a {
     background-position: center -10%;
     background-repeat: no-repeat;
@@ -245,7 +232,6 @@ footer {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    transition: background 0.3s ease;
 }
 
 .footer-copy {
@@ -274,7 +260,6 @@ footer {
     background-size: cover;
     background-position: center -20%;
     transition: background-position 0.3s ease;
-    order: -1;
 }
 
 .adam-icon:hover {

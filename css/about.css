@@ -132,18 +132,6 @@ main {
     z-index: 1;
 }
 
-/* Overlays ocultos por defecto */
-.layer.overlay {
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Overlay activo */
-.layer.overlay.active {
-    opacity: 1;
-}
-
 /* Separador encima de los overlays */
 .layer.separator {
     z-index: 3;
@@ -151,7 +139,7 @@ main {
     max-width: 10px;
     margin: auto;
     position: absolute;
-    left: 50%;
+    left: 49%;
 }
 
 /* Botón explore */
@@ -188,7 +176,7 @@ main {
 }
 
 .hover-zone:hover {
-    opacity: .1;
+    opacity: 1;
 
 }
 

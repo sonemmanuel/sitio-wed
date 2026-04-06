@@ -30,7 +30,7 @@ function createStars() {
   const positions = new Float32Array(count * 3);
 
   for (let i = 0; i < count * 3; i++) {
-    positions[i] = (Math.random() - 0.5) * 600;
+    positions[i] = (Math.random() - 0.5) * 300;
   }
 
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -211,14 +211,7 @@ planets.forEach((planetObj, index) => {
     });
   }
 });
-
-// Detectar hover sobre los planetas en 3D
-window.addEventListener('mousemove', (event) => {
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
   
-  raycaster.setFromCamera(mouse, camera);
-});
 
 // Función para actualizar posición del tooltip
 function updateTooltipPosition() {

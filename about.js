@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const exploreBtn = document.getElementById('explore-btn');
   const headSection = document.querySelector('.head-section');
   const anatomySection = document.getElementById('anatomy-section');
-  const backBtn = document.getElementById('backBtn');
   const anatomyCards = document.querySelectorAll('.anatomy-card');
 
   // ========== Array de imágenes disponibles ==========
